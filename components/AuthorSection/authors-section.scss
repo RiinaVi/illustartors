@@ -1,0 +1,59 @@
+.authorsSectionContainer{
+
+  margin-bottom: 86px;
+
+  h2 {
+    font-weight: normal;
+  }
+
+  //button.slick-prev::before{
+  //  transform: rotate(180deg) !important;
+  //}
+
+  .slick-slider{
+    height: 130px;
+    position: relative;
+    left: -20px;
+  }
+
+  .slick-slide {
+    width: max-content;
+  }
+
+  .authorsSlide{
+    //width: max-content !important;
+    display: flex !important;
+    flex-direction: column;
+    height: 130px;
+    align-items: center;
+    justify-content: space-between;
+
+    .text{
+      cursor: pointer;
+      bottom: 0;
+      left: 0;
+      //top: 16px;
+      text-align: center;
+    }
+
+    .authorsImage {
+      position: relative;
+      left: 0;
+      width: 72px;
+      height: 72px;
+      border: solid 1px #edeef0;
+      border-radius: 38px;
+    }
+
+    .artworksNum {
+      font-family: zeitung;
+      font-size: 12px;
+      color: #8f9499;
+    }
+
+  }
+
+}
+
+
+

@@ -1,21 +1,26 @@
-import React, {useState} from "react";
+import React from "react";
 // @ts-ignore
 import Search from '../../public/img/search.svg'
 // @ts-ignore
 import Close from '../../public/img/close.svg';
 
-const SearchBox = ({searchValue, setSearchValue}) => {
+const SearchBox = ({searchValue, setSearchValue, setSearchFilters}) => {
 
 
-    const closeHandler = () => setSearchValue('');
-    const valueSetter = e => setSearchValue(e.target.value)
+    const closeHandler = () => {
+        setSearchValue('');
+        setSearchFilters(false)
+    }
+    const valueSetter = e => setSearchValue(e.target.value);
 
     return (
         <div className={'searchContainer'}>
             <div className={'inputContainer'}>
-
                 <Search/>
-                <input type="text" value={searchValue} placeholder={'Search illustrations'} onChange={valueSetter}/>
+                <input type="text" value={searchValue}
+                       placeholder={'Search illustrations'}
+                       onChange={valueSetter}
+                />
                 {searchValue && <div className={'close'} onClick={closeHandler}><Close/></div>}
             </div>
             <div className="select">
@@ -27,7 +32,6 @@ const SearchBox = ({searchValue, setSearchValue}) => {
                     <option value="Pencil">Pencil</option>
                 </select>
             </div>
-
         </div>
     )
 }

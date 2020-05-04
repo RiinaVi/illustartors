@@ -11,6 +11,7 @@
 
   .stylesList {
     width: 242px;
+    margin-left: 21px;
   }
 
   .container {
@@ -83,7 +84,6 @@
       visibility: visible;
     }
 
-
     &::before {
       content: url("/img/quest.png");
       width: 24px;
@@ -133,6 +133,18 @@
     top: -28px;
     left: -36px;
     flex-direction: row-reverse;
+
+    &:first-of-type {
+      .styleImage::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+      }
+
+      .container{
+        width: 194px;
+      }
+    }
 
     &:hover .styleImage::before {
       visibility: visible;

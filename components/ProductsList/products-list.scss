@@ -1,7 +1,7 @@
 .productsListContainer {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: row;
   width: 863px;
   margin-top: 30px;
@@ -101,9 +101,8 @@
       .icons {
         position: absolute;
         visibility: hidden;
-        left: 165px;
-        top: 150px;
-        right: 16px;
+        left: 60%;
+        top: 75%;
         width: 76px;
 
         .heart, .cart {

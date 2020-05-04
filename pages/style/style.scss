@@ -6,10 +6,14 @@
 @import "components/SearchResult/search-result";
 @import "components/Filter/filter";
 @import "components/ProductsList/products-list";
+@import "components/AuthorSection/authors-section";
+@import "components/FeaturedSection/featured-section";
+@import "components/OnSaleSection/on-sale-section";
 
 body {
-  font-family: "zeitung-micro", sans-serif;
+  font-family: zeitung, sans-serif;
   margin: 0 auto;
+  background: white;
 }
 
 h1 {

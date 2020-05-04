@@ -10,7 +10,6 @@ header {
 .getillust {
   width: 50%;
   height: 18px;
-  //font-family: ZeitungPro, sans-serif;
   font-size: 12px;
   font-weight: 600;
   font-stretch: normal;
@@ -29,7 +28,6 @@ header {
   border-radius: 4px;
   border: solid 1px white;
   background-color: rgba(250, 251, 252, 0);
-  //font-family: ZeitungPro, sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -72,6 +70,12 @@ header {
   position: relative;
   cursor: pointer;
   left: 0;
+  img {
+    background: white;
+    border: 2px solid white;
+    border-radius: 35px;
+
+  }
 }
 
 .badge {

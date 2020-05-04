@@ -10,8 +10,6 @@
   background-color: #fafbfc;
   position: relative;
   .close{
-    //padding-right: 12px;
-    //position: absolute;
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -25,16 +23,12 @@
   align-items: center;
 }
 input {
+  font-family: zeitung, sans-serif;
   background: #fafbfc;
   height: 100%;
   width: calc(100% - 55px) ;
   margin: 0 0 0 14px;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #8f9499;
   box-sizing: border-box;
   border: transparent;

@@ -5,6 +5,16 @@ const Filter = ({styles}) => {
         <div className={'filterContainer'}>
             <h6>Styles</h6>
             <div className="stylesList">
+                <div className={'stylesListItem'}>
+                    <label className="container">
+                        <span>All</span>
+                        <input type="checkbox"/>
+                        <span className="checkmark"/>
+                    </label>
+                    <div className="styleImage">
+                        <img src='' alt=""/>
+                    </div>
+                </div>
                 {styles.map((style, index) => (
                     <div key={index} className={'stylesListItem'}>
                         <label className="container">

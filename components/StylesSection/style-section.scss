@@ -1,17 +1,54 @@
 
-
 .slideshow-container {
-  //max-width: 1000px;
-  position: relative;
-  //margin: auto;
-  background: burlywood;
-  display: flex;
-  flex-wrap: wrap;
+  h2 {
+    font-weight: normal;
+  }
+    .slick-prev {
+      left: -50px;
+    }
+
+
 }
 
-.slide{
-  width: 192px;
+.slick-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 25px;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.29);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #fafbfc;
+  }
+
+  &::before {
+    content: url("../../public/img/checvron.svg");
+  }
+
+}
+
+.slick-disabled {
+  display: none;
+}
+
+.slick-prev {
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
+.slide {
+  width: 192px !important;
   height: 202px;
+  border: solid 1px #edeef0;
+  background-color: #fafbfc;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
 
   img {
     position: relative;
@@ -21,53 +58,13 @@
   }
 }
 
-/* Hide the images by default */
-//.mySlides {
-//  display: none;
-//}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.29);
-  background-color: var(--white);
-
-}
-
-///* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
 
 .text {
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
   color: #12161a;
+  position: relative;
+  bottom: -16px;
 }
 
 
-.fullSizeSlides {
-  max-width: 1056px;
-  display: flex;
-
-}
