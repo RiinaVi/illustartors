@@ -1,0 +1,143 @@
+.filterContainer {
+  h6 {
+    width: 51px;
+    height: 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #787c80;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .stylesList {
+    width: 242px;
+  }
+
+  .container {
+    width: 242px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: -22px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 12px;
+
+    &::before {
+      content: '';
+      width: 50px;
+      position: absolute;
+      right: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .checkmark {
+        background-image: url("/img/on.svg");
+        background-repeat: round;
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &:hover {
+      border-radius: 6px;
+      background-color: #fafbfc;
+    }
+  }
+
+
+  .checkmark {
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-image: url("/img/off.svg");
+    background-repeat: round;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+  }
+
+
+  .styleImage {
+    cursor: pointer;
+
+    &:hover .styleImage::before {
+      visibility: visible;
+    }
+
+
+    &::before {
+      content: url("/img/quest.png");
+      width: 24px;
+      height: 24px;
+      position: relative;
+      left: -24px;
+      top: 3px;
+      visibility: hidden;
+    }
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: 32px;
+      left: -32px;
+      position: absolute;
+      border-top: 20px solid white;
+      visibility: hidden;
+    }
+
+    img {
+      width: 207px;
+      height: 152px;
+      visibility: hidden;
+      bottom: 40px;
+      position: absolute;
+      left: -34px;
+      border: 12px solid white;
+      box-sizing: border-box;
+      box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover img, &:hover::after {
+      visibility: visible;
+    }
+  }
+
+
+
+  .stylesListItem {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -28px;
+    left: -36px;
+    flex-direction: row-reverse;
+
+    &:hover .styleImage::before {
+      visibility: visible;
+    }
+  }
+}
+
+

@@ -1,0 +1,51 @@
+@import "components/Header/header";
+@import "components/SearchBox/search-box";
+@import "components/StylesSection/style-section";
+@import "components/Banner/banner";
+@import "components/Footer/footer";
+@import "components/SearchResult/search-result";
+@import "components/Filter/filter";
+@import "components/ProductsList/products-list";
+
+body {
+  font-family: "zeitung-micro", sans-serif;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 40px auto 0;
+  width: 808px;
+  height: 48px;
+  font-size: 32px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #12161a;
+}
+
+p {
+  margin: 0 auto;
+  width: 251px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #12161a;
+}
+
+h2 {
+  font-size: 20px;
+  color: #12161a;
+}
+
+main {
+  max-width: 1280px;
+  margin: auto;
+}

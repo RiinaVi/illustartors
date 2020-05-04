@@ -1,0 +1,138 @@
+.productsListContainer {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 863px;
+  margin-top: 30px;
+
+  .item {
+    width: 264px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+    font-size: 12px;
+    color: #12161a;
+
+    .authorInfo {
+      display: flex;
+      align-items: center;
+    }
+
+    .authorImg {
+      width: 20px;
+      height: 20px;
+      border: solid 1px #edeef0;
+      background-color: #fafbfc;
+      border-radius: 20px;
+      margin-right: 8px;
+    }
+
+
+    .priceChange {
+      display: flex;
+
+      .newPrice {
+        color: #d14536;
+      }
+
+      .oldPrice {
+        color: #8f9499;
+        margin-left: 6px;
+        position: relative;
+        text-align: center;
+
+        span {
+          background-color: #fff;
+          display: inline-block;
+          position: relative;
+          text-align: center;
+        }
+
+        &::after {
+          background-color: #8f9499;
+          content: "";
+          height: 1px;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 44%;
+        }
+      }
+    }
+
+    .itemPrice {
+      &::before {
+        content: "$";
+      }
+    }
+
+    img {
+      left: 0;
+      position: relative;
+      width: 264px;
+      height: 198px;
+      border: solid 1px #edeef0;
+      cursor: pointer;
+    }
+
+    .productImageContainer {
+      position: relative;
+      bottom: 11px;
+      cursor: pointer;
+      display: flex;
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        left: 0;
+        visibility: hidden;
+      }
+
+      &:hover::after, &:hover .icons {
+        visibility: visible;
+      }
+
+      .icons {
+        position: absolute;
+        visibility: hidden;
+        left: 165px;
+        top: 150px;
+        right: 16px;
+        width: 76px;
+
+        .heart, .cart {
+          width: 36px;
+          height: 32px;
+          border-radius: 2px;
+          background-color: rgba(255, 255, 255, 0.85);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          img {
+            height: 16px;
+            width: 16px;
+            border: none;
+          }
+        }
+
+        .cart img{
+          width: 21px;
+          height: 16px;
+        }
+
+        .cart{
+          left: 10px;
+        }
+
+      }
+    }
+  }
+}
