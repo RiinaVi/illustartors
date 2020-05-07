@@ -3,7 +3,7 @@ import Item from "./Item";
 
 const ProductList = ({products}) => {
     return (
-        <div className={"productsListContainer"}>
+        <div className={"productsList"}>
             {products && products.map((item, index) => (
               <Item key={index} item={item}/>
             ))}

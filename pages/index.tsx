@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {NextPage} from "next";
 import fetch from "isomorphic-unfetch";
-
 import Layout from "../components/Layout/Layout";
-
 import Head from "next/head";
 import SearchBox from "../components/SearchBox/SearchBox";
 import StyleSection from "../components/StylesSection/StyleSection";
@@ -22,36 +20,39 @@ const HomePage: NextPage<Props> = ({products, styles, authors}) => {
     const [searchValue, setSearchValue] = useState('');
     const [showFilters, setShowFilters] = useState(false);
 
-    useEffect(()=> {
-       searchValue ? setShowFilters(true) : setShowFilters(false)
+    useEffect(() => {
+        searchValue ? setShowFilters(true) : setShowFilters(false)
     }, [searchValue])
 
     return (
-        <>
-            <Layout>
-                <Head>
-                    <title>get.illust</title>
-                </Head>
-                <h1>Hand-picked Digital Illustrations for Web and Mobile</h1>
-                <p>Powered by top artists worldwide</p>
-                <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} setSearchFilters={setShowFilters}/>
-                {showFilters ?
+        <Layout>
+            <Head>
+                <title>get.illust</title>
+            </Head>
+            <section>
+                <div className="container">
+                    <h1>Hand-picked Digital Illustrations for Web and Mobile</h1>
+                    <p>Powered by top artists worldwide</p>
+                    <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}
+                               setSearchFilters={setShowFilters}/>
+                </div>
+            </section>
+            {showFilters ?
+                <main>
+                    <SearchResult styles={styles} products={products} searchValue={searchValue}/>
+                </main>
+                :
+                <>
                     <main>
-                        <SearchResult styles={styles} products={products} searchValue={searchValue}/>
+                        <StyleSection styles={styles}/>
+                        <FeaturedSection products={products}/>
+                        <OnSaleSection products={products}/>
+                        <AuthorsSection authors={authors}/>
                     </main>
-                    :
-                    <>
-                        <main>
-                            <StyleSection styles={styles}/>
-                            <FeaturedSection products={products}/>
-                            <OnSaleSection products={products}/>
-                            <AuthorsSection authors={authors}/>
-                        </main>
-                        <Banner/>
-                    </>
-                }
-            </Layout>
-        </>
+                    <Banner/>
+                </>
+            }
+        </Layout>
     )
 }
 

@@ -6,7 +6,7 @@ const Filter = ({styles}) => {
             <h6>Styles</h6>
             <div className="stylesList">
                 <div className={'stylesListItem'}>
-                    <label className="container">
+                    <label className="stylesListItem__container">
                         <span>All</span>
                         <input type="checkbox"/>
                         <span className="checkmark"/>
@@ -17,7 +17,7 @@ const Filter = ({styles}) => {
                 </div>
                 {styles.map((style, index) => (
                     <div key={index} className={'stylesListItem'}>
-                        <label className="container">
+                        <label className="stylesListItem__container">
                             <span>{style.name}</span>
                             <input type="checkbox"/>
                             <span className="checkmark"/>

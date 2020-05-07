@@ -1,16 +1,19 @@
 import React from "react";
-import BlueButton from "../BlueButton";
+import SubmitButton from "../SubmitButton";
 
 const Banner = () => {
     return (
-        <div className={'bannerContainer'}>
-            <div>
-                <h2>Contribute today</h2>
-                <p>Earn some serious cash selling your artwork on get.illust</p>
-                <BlueButton/>
+
+        <section className={'banner'}>
+            <div className="container">
+                <div className={"bannerText"}>
+                    <h2>Contribute today</h2>
+                    <p>Earn some serious cash selling your artwork on get.illust</p>
+                    <SubmitButton/>
+                </div>
             </div>
-            <img src="/img/footer-img.jpg" alt=""/>
-        </div>
+        </section>
+
     )
 }
 
